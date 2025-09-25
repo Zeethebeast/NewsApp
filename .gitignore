@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Django
+*.log
+db.sqlite3
+staticfiles/
+media/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Migrations (optional: keep if you want DB history in repo)
+*/migrations/__pycache__/
+*/migrations/*.py
+!*/migrations/__init__.py
+

@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block title %} ABSOA {% endblock %}
+
+{% block content %}
+<!-- Carousel Card (ABIA OHURU) -->
+<div class="card mt-4 w-100 border-0 shadow-lg" style="border-radius: 12px; overflow: hidden; position: relative; min-height: 250px;">
+  <div id="abiaCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://picsum.photos/1200/500?random=3" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://picsum.photos/1200/500?random=4" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;">
+      </div>
+      <div class="carousel-item h-100">
+        <img src="https://picsum.photos/1200/500?random=5" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Date & Time -->
+  <div style="position: absolute; top: 10px; left: 15px; color: white; z-index: 10;">
+    <div id="date" style="font-family: 'Great Vibes', cursive; font-size: 1rem;"></div>
+    <div id="time" style="font-family: 'Great Vibes', cursive; font-size: 0.9rem; margin-top: 3px;"></div>
+  </div>
+
+  <!-- Center Text -->
+  <div id="abiaText" class="center-text">
+    ABIA OHURU!
+  </div>
+</div>
+
+<!-- Lemon Green Divider -->
+<hr style="border: 2px solid limegreen; margin: 2rem 0;">
+
+<!-- Trending Section -->
+<div class="d-flex justify-content-start mb-2">
+  <span style="font-weight: bold; color: limegreen; font-size: 1.2rem;">TRENDING</span>
+</div>
+
+<!-- Layout with side cards and carousel -->
+<div class="row g-3">
+  <!-- Left Column (3 cards) -->
+  <div class="col-md-3 d-none d-md-block">
+    <div class="card mb-3">
+      <img src="https://picsum.photos/300/150?random=14" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 1</h5>
+        <p class="card-text">Short description of the news story.</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <img src="https://picsum.photos/300/150?random=15" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 2</h5>
+        <p class="card-text">Another breaking news summary.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/300/150?random=16" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 3</h5>
+        <p class="card-text">Quick highlight of latest events.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Center Column (Carousel with increased height) -->
+  <div class="col-md-6">
+    <div class="card border-0 shadow-lg" style="border-radius: 12px; overflow: hidden; height: 500px;"> <!-- Increased height -->
+      <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item active h-100">
+            <img src="https://picsum.photos/800/500?random=6" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Breaking News: Market Shifts</h5>
+              <p>Global markets experience unexpected volatility today.</p>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="https://picsum.photos/800/500?random=7" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Local Festival Begins</h5>
+              <p>The annual cultural festival has officially kicked off.</p>
+            </div>
+          </div>
+          <div class="carousel-item h-100">
+            <img src="https://picsum.photos/800/500?random=8" class="d-block w-100 h-100 img-fluid" style="object-fit: cover;" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sports Update: Team Victory</h5>
+              <p>Abia United secures a 3-0 win in yesterday’s match.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Column (3 cards) -->
+  <div class="col-md-3 d-none d-md-block">
+    <div class="card mb-3">
+      <img src="https://picsum.photos/300/150?random=17" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 4</h5>
+        <p class="card-text">News analysis and updates.</p>
+      </div>
+    </div>
+    <div class="card mb-3">
+      <img src="https://picsum.photos/300/150?random=18" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 5</h5>
+        <p class="card-text">Latest trends making headlines.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://picsum.photos/300/150?random=19" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Headline 6</h5>
+        <p class="card-text">Highlights from across the globe.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Custom CSS -->
+<style>
+  .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    opacity: 0;
+    transition: all 8s ease-in-out;
+    pointer-events: none;
+    text-align: center;
+  }
+  .center-text.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: all 3s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    .center-text {
+      font-size: 1.5rem;
+      -webkit-text-stroke: 0.5px white;
+    }
+    .carousel-caption h5 {
+      font-size: 1.2rem;
+    }
+    .carousel-caption p {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<!-- Script for date/time + synced animations -->
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+    document.getElementById("date").textContent = now.toLocaleDateString("en-US", dateOptions);
+    document.getElementById("time").textContent = now.toLocaleTimeString("en-US", timeOptions);
+  }
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
+
+  const abiaText = document.getElementById("abiaText");
+  const carousel = document.getElementById("abiaCarousel");
+
+  carousel.addEventListener("slide.bs.carousel", () => {
+    abiaText.classList.remove("show");
+  });
+  carousel.addEventListener("slid.bs.carousel", () => {
+    abiaText.classList.add("show");
+  });
+  window.addEventListener("load", () => {
+    abiaText.classList.add("show");
+  });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+{% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} ABSOA {% endblock %}
 
 {% block content %}
@@ -48,7 +48,7 @@
 <!-- Layout with side cards and carousel -->
 <div class="row g-3">
   <!-- Left Column (3 cards) -->
-  <div class="col-md-3 d-none d-md-block">
+  <div class="col-12 col-md-3">
     <div class="card mb-3">
       <img src="https://picsum.photos/300/150?random=14" class="card-img-top" alt="...">
       <div class="card-body">
@@ -73,8 +73,8 @@
   </div>
 
   <!-- Center Column (Carousel with increased height) -->
-  <div class="col-md-6">
-    <div class="card border-0 shadow-lg" style="border-radius: 12px; overflow: hidden; height: 500px;"> <!-- Increased height -->
+  <div class="col-12 col-md-6">
+    <div class="card border-0 shadow-lg" style="border-radius: 12px; overflow: hidden; height: 500px;">
       <div id="carouselExampleCaptions" class="carousel slide h-100" data-bs-ride="carousel">
         <div class="carousel-inner h-100">
           <div class="carousel-item active h-100">
@@ -114,7 +114,7 @@
   </div>
 
   <!-- Right Column (3 cards) -->
-  <div class="col-md-3 d-none d-md-block">
+  <div class="col-12 col-md-3">
     <div class="card mb-3">
       <img src="https://picsum.photos/300/150?random=17" class="card-img-top" alt="...">
       <div class="card-body">
@@ -139,40 +139,102 @@
   </div>
 </div>
 
-<!-- Custom CSS -->
-<style>
-  .center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: transparent;
-    -webkit-text-stroke: 1px white;
-    opacity: 0;
-    transition: all 8s ease-in-out;
-    pointer-events: none;
-    text-align: center;
-  }
-  .center-text.show {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.1);
-    transition: all 3s ease-in-out;
-  }
-  @media (max-width: 768px) {
-    .center-text {
-      font-size: 1.5rem;
-      -webkit-text-stroke: 0.5px white;
-    }
-    .carousel-caption h5 {
-      font-size: 1.2rem;
-    }
-    .carousel-caption p {
-      font-size: 0.9rem;
-    }
-  }
-</style>
+
+<!-- WORLD Section -->
+<hr class="my-4" style="border-top: 3px solid rgb(22, 164, 211);">
+
+<div class="d-flex align-items-center mb-3">
+  <i class="fas fa-globe text-primary me-2"></i>
+  <h5 class="text-primary mb-0">WORLD</h5>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/150?random=20" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Global News Headline</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 5 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/150?random=21" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Breaking World Story</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 10 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/300/150?random=22" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">International Feature</h5>
+        <p class="card-text">This is a wider card with more text to show how equal height works in the layout.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 15 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- POLITICS Section -->
+<hr class="my-4" style="border-top: 3px solid #FFD700;">
+
+<div class="d-flex align-items-center mb-3">
+  <i class="fas fa-handshake text-warning me-2"></i>
+  <h5 class="text-warning mb-0">POLITICS</h5>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/200?random=30" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Political Headline 1</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/200?random=31" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Political Headline 2</h5>
+        <p class="card-text">Another politics story with a summary description.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/200?random=32" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Political Headline 3</h5>
+        <p class="card-text">Supporting text and details of an ongoing debate or election.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://picsum.photos/400/200?random=33" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Political Headline 4</h5>
+        <p class="card-text">Further insights into the latest developments in government affairs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Script for date/time + synced animations -->
 <script>
@@ -201,5 +263,11 @@
   });
 </script>
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
 {% endblock %}

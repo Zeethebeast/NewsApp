@@ -16,9 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Your app(s)
-    "absotv",
+    'dashboard',
+    'absotv',
 ]
 
 
@@ -81,8 +80,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Optional global static folder at project root
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+#STATICFILES_DIRS = [
+    # / "static",
+#]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -39,3 +39,93 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* adds a deeper shadow */
   z-index: 10; /* ensures hovered card stays above others */
 }
+
+.rotate-icon {
+  display: inline-block;
+  animation: spin 4s linear infinite;
+}
+
+
+
+/*sports*/
+/* Animated sports divider */
+.divider {
+  height: 4px;
+  background: linear-gradient(90deg, red, yellow, green, blue);
+  background-size: 400% 100%;
+  animation: moveLine 5s linear infinite;
+  border-radius: 2px;
+}
+
+@keyframes moveLine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Rotating football icon */
+.rotate-icon {
+  display: inline-block;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sports card hover */
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Culture Section Cards */
+.culture-card {
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.culture-card img {
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+.culture-card:hover img {
+  transform: scale(1.1);
+}
+
+.culture-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.culture-card:hover .overlay {
+  opacity: 1;
+}
+
+.culture-card .overlay h5 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.culture-card .overlay p {
+  font-size: 0.9rem;
+}
